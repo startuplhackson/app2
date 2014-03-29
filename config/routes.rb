@@ -3,6 +3,15 @@ Sr::Application.routes.draw do
 
   get "static_pages/help"
 
+  get "static_pages/about"
+
+  get "static_pages/post"
+
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/post', to: 'static_pages#post', via: 'get'
+
+  root to: 'static_pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
