@@ -1,0 +1,226 @@
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.
+.
+.
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+
+input, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  @include box_sizing;
+}
+
+
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+#shift_description {
+  outline: none;
+  border:none !important;
+  box-shadow:none !important;  
+  height: 40px;
+  padding:0px;
+  width:100%;
+  display:inline;
+}
+
+#shift_start_datetime_1i {
+  
+  width: 80px;
+  padding: 5px;
+}
+#shift_start_datetime_2i {
+  
+  width: 60px;
+   padding: 5px;
+}
+#shift_start_datetime_3i {
+  
+  width: 60px;
+   padding: 5px;
+}
+#shift_start_datetime_4i {
+ 
+  width: 55px;
+   padding: 5px;
+}
+#shift_start_datetime_5i {
+  
+  width: 55px;
+   padding: 5px;
+}
+#shift_duration_mins_4i {
+  
+  width: 55px;
+   padding: 5px;
+}
+#shift_duration_mins_5i {
+ 
+  width: 55px;
+   padding: 5px;
+}
+
+#shift_repeat_until_3i {
+  width:55px;
+}
+#shift_repeat_until_2i {
+  width:65px;
+}
+#shift_repeat_until_1i {
+  width:75px;
+}
+
+
+.shift_role {
+  display:inline;
+  width: 90%;
+    outline: none;
+  border:none !important;
+  box-shadow:none !important; 
+}
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+.offered {
+  border:1px solid gray; 
+  border-radius:5px; 
+  margin:5px;
+  background-color: #C7DBA9;
+}
+.offered:hover {
+  background-color: #B2C2B9;
+  }
+
+.unoffered {
+  border:1px solid gray; 
+  border-radius:5px; 
+  margin:5px
+}
+.unoffered:hover {
+  background-color: #C7DBA9;
+  }
+
+.offeredrejected {
+  border:1px solid gray; 
+  border-radius:5px; 
+  margin:5px;
+  background-color: #EDEBD6;
+} 
+
+.request12 {
+  padding: 10px;
+  background-color: white;
+  border:1px solid gray; 
+  border-radius:5px; 
+  margin:5px
+}
+.request12:hover {
+  background-color: #C7DBA9;
+  }
+
+.btn-medium {
+    margin-bottom: 3px
+  }
+
+.schedule-open:hover{
+  background-color: #F2D0D7;
+}
+
+.schedule-filled:hover{
+  background-color: #CFE8D5;
+}
+
+/* available shifts page */
+
+.request-circle-filled:hover{
+  background-color: #FFFFFF;
+}
+
+.request-circle-open:hover{
+  background-color: #77A8FC;
+}
+
+/* justifying text for schedule times */
+.fulljustify {
+  text-align: justify;
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+/* bootstrap date picker */
+
+.bsdatepicker:hover {
+  background-color: #e7eff3;
+}
+
+
+
+.homepagebox:hover {background: white;
+}
+
+.myshifts{
+  background: gray;
+}
+
+/* caret for collapse accordian box */
+
+.collapsecaret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  line-height:100px;
+  padding: 10px 0px 0px 0px;
+  vertical-align: middle;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  opacity: 0.3;
+  color: #5A5A5A;
+  filter: alpha(opacity=30);
+}
