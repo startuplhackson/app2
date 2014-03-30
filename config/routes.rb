@@ -1,4 +1,6 @@
 Sr::Application.routes.draw do
+  resources :posts
+
   get "posts/new"
 
   get "static_pages/home"
