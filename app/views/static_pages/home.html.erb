@@ -1,10 +1,9 @@
 <% provide(:title, 'TechRumors - Hottest new tech rumors') %>
 
 <% if params[:show] != "all" %>
-<h3><strong>hot</strong> | <a href="/?show=all">all</a></h3>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+	<h3><strong>hot</strong> | <a href="/?show=all">all</a></h3>
+ 	<%= render partial: 'posts/hot_post', collection: @hot_posts %>
 <% else %>
-<h3><%= link_to "hot", root_path %> | <strong>all</strong></h3>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+	<h3><%= link_to "hot", root_path %> | <strong>all</strong></h3>
+	<%= render partial: 'posts/hot_post', collection: @all_posts %>
 <% end %>
-<%= params[:show] %>

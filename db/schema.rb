@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140330145829) do
+ActiveRecord::Schema.define(:version => 20140418133504) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(:version => 20140330145829) do
     t.integer  "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "upvotes"
+    t.integer  "downvotes"
+    t.integer  "totalvotes"
   end
+
+  add_index "posts", ["status"], :name => "index_posts_on_status"
+  add_index "posts", ["title"], :name => "index_posts_on_title"
 
 end
