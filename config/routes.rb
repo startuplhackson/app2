@@ -1,4 +1,6 @@
 Sr::Application.routes.draw do
+  get "users/new"
+
   resources :posts
 
   get "posts/new"
