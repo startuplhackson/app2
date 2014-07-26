@@ -1,5 +1,6 @@
 Sr::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   resources :posts
 
@@ -15,6 +16,9 @@ Sr::Application.routes.draw do
 
   match '/about', to: 'static_pages#about', via: 'get'
   match '/post', to: 'static_pages#post', via: 'get'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/signup', to: 'users#new', via: 'get'
 
   root to: 'static_pages#home'
 

@@ -16,7 +16,14 @@
 </head>
 <body>
 <div class="container-fluid">
-	<h3><strong><%= link_to "TechRumors", root_path %></strong>     <a href="/posts/new">(+ post)</a>     <a href="/about">(about)</a></h3>
+	<h3><strong><%= link_to "TechRumors", root_path %></strong>     <a href="/posts/new">(+ post)</a>     <a href="/about">(about)</a>   </h3>
+	<% if signed_in? %>
+	Signed in as <%= current_user.id %>
+	<%= link_to "Sign out", signout_path, method: "delete" %>
+	<% else %>
+	<%= link_to "Sign in", signin_path %>
+	signed out
+	<% end %>
 	<div>
 
 <div class="container-fluid">
